@@ -8,3 +8,14 @@
   font-style:normal;
   font-size:14pt;
 }
+.conterner{display:flex;
+          flex-direction:column;
+          height:100vh;}
+.header{flex:15%;
+       background-color:blue;}
+.menu{flex:5%;
+     background-color:red;}
+.content{flex:70%;
+         background-color:white;}
+.footer{flex:10%;
+        background-color:blue;}
