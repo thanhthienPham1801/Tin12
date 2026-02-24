@@ -18,6 +18,8 @@
 .menu a{
   padding:15px;
 }
+.menu hover{background-color:lightgray;
+            color:black;}
 .content{flex:70%;
          background-color:white;}
 .content iframe{flex:1;
