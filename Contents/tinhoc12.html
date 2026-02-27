@@ -13,20 +13,38 @@
       color: darkblue;
       text-align: center;
       font-size: 22px;
+      margin-bottom: 20px;
     }
 
-    .tieude h2 {
+    .tieude {
+      list-style-type: upper-alpha;
+      padding-left: 20px;
+    }
+
+    .tieude li h2 {
+      display: inline;
       color: tomato;
       font-size: 18px;
+    }
+
+    .tieude > li {
+      margin-bottom: 20px;
+      color: tomato;
+      font-weight: bold;
     }
 
     .noidung {
       font-size: 15px;
       color: black;
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-top: 10px;
+      font-weight: normal;
     }
 
     .noidung li {
       color: black;
+      margin-bottom: 5px;
     }
   </style>
 </head>
@@ -34,7 +52,7 @@
 <body>
   <h1>CHƯƠNG TRÌNH TIN HỌC 12</h1>
 
-  <ol class="tieude" type="A">
+  <ol class="tieude">
     <li>
       <h2>GIỚI THIỆU TRÍ TUỆ NHÂN TẠO, HỌC MÁY VÀ KHOA HỌC DỮ LIỆU</h2>
       <ul class="noidung">
