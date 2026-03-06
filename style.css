@@ -11,24 +11,20 @@ body, html {
 
 .banner {
   width: 100%;
-  max-width: 900px;
-  height: auto;
-  max-height: 150px;
-  object-fit: contain;
+  height: 150px;
+  object-fit: cover;
   display: block;
-  margin: 0 auto;
-  border-radius: 10px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
   background-color: blue;
-  padding: 10px 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -41,6 +37,7 @@ body, html {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu li {
@@ -73,8 +70,8 @@ body, html {
 }
 
 .footer {
-  flex: 0 0 10%;
   background-color: blue;
+  padding: 10px;
 }
 
 .tieude {
