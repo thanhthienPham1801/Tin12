@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Đăng kí Hội thao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 550px;
+        }
+        h2 { color: #1a73e8; margin-top: 0; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .radio-check-group { margin: 15px 0; }
+        .radio-check-group label { display: inline; font-weight: normal; margin-right: 15px; }
+        
+        .btn-group { margin-top: 20px; }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-submit { background-color: #1a73e8; color: white; margin-right: 10px; }
+        .btn-reset { background-color: #e4e6eb; color: #050505; }
+        button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>Đăng kí tham gia Hội thao</h2>
+        <form action="thanks.html">
+            <div class="input-group">
+                <label>Họ và tên:</label>
+                <input type="text" name="hoten" required>
+            </div>
+
+            <div class="input-group">
+                <label>Địa chỉ email:</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="radio-check-group">
+                <input type="radio" id="l10" name="lop" value="10"> <label for="l10">Lớp 10</label>
+                <input type="radio" id="l11" name="lop" value="11"> <label for="l11">Lớp 11</label>
+                <input type="radio" id="l12" name="lop" value="12"> <label for="l12">Lớp 12</label>
+            </div>
+
+            <div class="radio-check-group">
+                <label style="display:block; font-weight:bold;">Tham dự môn:</label>
+                <input type="checkbox" id="m1" name="mon" value="BongBan"> <label for="m1">Bóng bàn</label><br>
+                <input type="checkbox" id="m2" name="mon" value="CauLong"> <label for="m2">Cầu lông</label><br>
+                <input type="checkbox" id="m3" name="mon" value="CoVua"> <label for="m3">Cờ vua</label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Đăng kí</button>
+                <button type="reset" class="btn-reset">Huỷ bỏ</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
 
