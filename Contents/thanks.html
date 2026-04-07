@@ -2,36 +2,68 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <title>Cảm ơn bạn</title>
+    <title>Kết quả góp ý</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 500px; width: 100%; text-align: center; }
-        #kq { color: #2c3e50; font-size: 18px; line-height: 1.6; margin-bottom: 30px; }
-        .btn-back { display: inline-block; background-color: #bdc3c7; color: black; padding: 10px 25px; text-decoration: none; border-radius: 4px; border: 1px solid #999; font-weight: bold; }
-        .btn-back:hover { background-color: #aeb6bf; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        #kq {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #bdc3c7; /* Màu xám giống trong ảnh yêu cầu */
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #999;
+        }
+        .btn-back:hover {
+            background-color: #aeb6bf;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <p id="kq"></p>
-        
+
         <a href="index.html" class="btn-back">Quay lại</a>
     </div>
 
     <script>
-        // Lấy dữ liệu từ thanh địa chỉ (URL)
-        let params = new URLSearchParams(location.search);
-        let name = params.get("txtName");
-        let yk = params.get("txtYk");
+        // Lấy các tham số từ URL
+        let params = new URLSearchParams(window.location.search);
+        let name = params.get("ten"); // Phải khớp với name="ten" ở trang form
+        let yk = params.get("comment"); // Phải khớp với name="comment" ở trang form
 
-        // Nếu có dữ liệu thì hiện, nếu không có (null) thì hiện thông báo mặc định
-        if (name && yk) {
+        // Hiển thị nội dung lên trang
+        if(name && yk) {
             document.getElementById("kq").innerHTML = 
-                "Cảm ơn bạn <b>" + name + "</b> đã góp ý <br> <br> " +
-                "Chúng tôi xin ghi nhận ý kiến của bạn như sau: <br> <i>" + yk + "</i>";
+                "<b>Cảm ơn bạn " + name + " đã góp ý</b><br><br>" +
+                "Chúng tôi xin ghi nhận ý kiến của bạn như sau:<br><i>" + yk + "</i>";
         } else {
-            document.getElementById("kq").innerHTML = "<b>Thông báo:</b> <br> Chưa nhận được dữ liệu. Vui lòng quay lại trang chủ.";
+            document.getElementById("kq").innerHTML = "Cảm ơn bạn đã đóng góp ý kiến cho nhà trường!";
         }
     </script>
+
 </body>
 </html>
